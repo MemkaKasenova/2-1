@@ -10,17 +10,17 @@ import Foundation
 class Client {
     var firstName:String
     var lastName:String
-    var card: [Int] = []
+    var cards: [Card] = []
 
 
-    init(firstName: String, lastName: String, card: [Int]) {
+    init(firstName: String, lastName: String, card: [Card]) {
         self.firstName = firstName
         self.lastName = lastName
-        self.card = card
+        self.cards = card
     }
     
     func showInfo() {
-        print("firstName: \(firstName), lastName: \(lastName), card: \(card)")
+        print("firstName: \(firstName), lastName: \(lastName), card: \(cards)")
     }
 }
 

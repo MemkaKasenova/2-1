@@ -16,30 +16,62 @@ class Bank {
         self.clientName = clientName
         self.client = client
     }
+    
+    
+    func perevod (numberCard:Int,numberCard2:Int, client1:Client, client2:Client,amount:Double) {
+        var result: String?
+        for card in client1.cards {
+            if numberCard == card.cardNumber {
+                result = card.bankName
+                transaction(client1Card: card, client2: client2, amount: amount, numberCard: numberCard2)
+                break
+            }else{
+                result = "Карта не найдена!"
+            }
+        }
+        print(result!)
     }
+
+
+func transaction(client1Card: Card, client2: Client, amount:Double, numberCard:Int) {
+    var resultCard: Card?
+    for card in client2.cards {
+        if numberCard == card.cardNumber { resultCard = card
+            print("\(client2.firstName) \(client2.lastName)")
+            break
+        }
+    }
+    if resultCard != nil {
+        resultCard?.bill += amount
+        client1Card.bill -= amount
+        print(resultCard!.bill)
+        print(client1Card.bill)
+    }
+    
+}
+}
+
 //    func showClientsInfo() {
 //        for client in client {
 //            print("Банк: \(bankName)")
 //            print(client.firstName, client.lastName)
 //        }
 //  }
-    func transaction(client1: Client, client2: Client, amount:Double){
-        print("Выберите карту:")
-        var card = readLine()
-        
-        func showClientsInfo() {
-            for bank in bankName {
-                print("Банк: \(bankName)")
-            }
-        }
-        print("Введите номер карты клиента которому хотите перевести средства:")
-        var cardNumber = readLine()
-        let transactionSum = readLine()
-        
-        let transaction: Double? = Double(transactionSum!)
-    }
 
-
+//
+//        func showClientsInfo() {
+//            for bank in bankName {
+//                print("Банк: \(bankName)")
+//            }
+//        }
+//        print("Введите номер карты клиента которому хотите перевести средства:")
+//        var cardNumber = readLine()
+//        let transactionSum = readLine()
+//
+//        let transaction: Double? = Double(transactionSum!)
+//    }
+//
+//
 
 
 
