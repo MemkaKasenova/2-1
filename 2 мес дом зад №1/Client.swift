@@ -12,15 +12,10 @@ class Client {
     var lastName:String
     var cards: [Card] = []
 
-
     init(firstName: String, lastName: String, card: [Card]) {
         self.firstName = firstName
         self.lastName = lastName
         self.cards = card
-    }
-    
-    func showInfo() {
-        print("firstName: \(firstName), lastName: \(lastName), card: \(cards)")
     }
 }
 

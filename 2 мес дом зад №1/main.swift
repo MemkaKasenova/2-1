@@ -19,32 +19,21 @@ var bankName:String = "OptimaBank"
 var cardNumber2:Int = 12345678910111
 var bill:Double = 20907.34
 
-//func showInfo() {
-//    print(firstName,lastName, card, bankName, cardNumber,bill)
-//}
-// showInfo()
-
-
 var card1 = Card(bankName: "OptimaBank", cardNumber: 12345678910111, bill: 20907.34)
 var card2 = Card(bankName: "DemirBank", cardNumber: 12345678910119, bill: 686668.08)
 var card3 = Card(bankName: "ZalkarBank", cardNumber: 12345678910118, bill: 67575.66)
 var card4 = Card(bankName: "KeremetBank", cardNumber: 12345678910114, bill: 7474.78)
 var card5 = Card(bankName: "ATFBank", cardNumber: 12345678910116, bill: 75759.87)
 
-var client1 = Client(firstName: "Atake", lastName: "Kasenov", card:[card1,card3,card4,card5])
+var client1 = Client(firstName: "Atake", lastName: "Kasenov", card:[card1,card3,card4])
 
-var client2 = Client(firstName: "Fatima", lastName: "Sataeva", card:[card2])
+var client2 = Client(firstName: "Fatima", lastName: "Sataeva", card:[card2,card5])
 
 var bank = Bank(clientName: "Atake", client: [1])
 
-//bank.perevod(numberCard: 12345678910119, client1: client1, )
+
 bank.perevod(numberCard: 12345678910111, numberCard2: 12345678910119, client1: client1, client2: client2, amount: 500)
 
-//client1.firstName = "Atake"
-//client1.lastName = "Kasenov"
-//client1.cards = 231
-//
-//print(client1.firstName, client1.lastName, client1.cards)
 
 
 

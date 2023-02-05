@@ -17,7 +17,6 @@ class Bank {
         self.client = client
     }
     
-    
     func perevod (numberCard:Int,numberCard2:Int, client1:Client, client2:Client,amount:Double) {
         var result: String?
         for card in client1.cards {
@@ -31,8 +30,7 @@ class Bank {
         }
         print(result!)
     }
-
-
+    
 func transaction(client1Card: Card, client2: Client, amount:Double, numberCard:Int) {
     var resultCard: Card?
     for card in client2.cards {
@@ -47,31 +45,6 @@ func transaction(client1Card: Card, client2: Client, amount:Double, numberCard:I
         print(resultCard!.bill)
         print(client1Card.bill)
     }
-    
 }
 }
-
-//    func showClientsInfo() {
-//        for client in client {
-//            print("Банк: \(bankName)")
-//            print(client.firstName, client.lastName)
-//        }
-//  }
-
-//
-//        func showClientsInfo() {
-//            for bank in bankName {
-//                print("Банк: \(bankName)")
-//            }
-//        }
-//        print("Введите номер карты клиента которому хотите перевести средства:")
-//        var cardNumber = readLine()
-//        let transactionSum = readLine()
-//
-//        let transaction: Double? = Double(transactionSum!)
-//    }
-//
-//
-
-
 
